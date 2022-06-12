@@ -4,8 +4,8 @@ from ibm_cloud_sdk_core.authenticators import IAMAuthenticator
 import av
 import time
 
-apikey = 'cE3WuAQv6sE_Sd2QFQMZqcOI6_0VN3sraGx7Edy-IAXJ'
-url = 'https://api.eu-gb.text-to-speech.watson.cloud.ibm.com/instances/2fab6c67-335c-40fb-a2b5-d9bd56c889dc'
+apikey = 'ycMzyIa4Qaf_e-jYjkDbvq-DX_eOjqDjjN3ci6S89zgf'
+url = 'https://api.eu-gb.text-to-speech.watson.cloud.ibm.com/instances/bcb012c6-ec67-407f-87ed-5ac05d1eb2c8'
 
 # Setup Service
 authenticator = IAMAuthenticator(apikey)
