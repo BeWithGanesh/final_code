@@ -1,5 +1,1 @@
-person 120 inches
-person 160 inches
-person 151 inches
-person 305 inches
-person 87 inches
+person 33 inches

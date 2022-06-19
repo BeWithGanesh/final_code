@@ -10,13 +10,13 @@ import time
 audio_counter = 0
 new_audio_file = open('audio.mp3', 'rb')
 audio_bytes = new_audio_file.read()
-st.audio(audio_bytes, format='audio/ogg')
-new_audio_file.close()    
+new_audio_file.close() 
+st.audio(audio_bytes, format='audio/ogg')   
 RTC_CONFIGURATION = RTCConfiguration(
     {"iceServers": [{"urls": ["stun:stun.l.google.com:19302"]}]}
 )
 
-count = st_autorefresh(interval=2500, limit=1000000, key="fizzbuzzcounter")
+count = st_autorefresh(interval=4500, limit=1000000, key="fizzbuzzcounter")
 
 import av
 from tts import *
@@ -47,8 +47,9 @@ class AudioProcessor(AudioProcessorBase):
         self.new_audio_file = open('audio.mp3', 'rb')
         self.audio_bytes = self.new_audio_file.read()
         print(len(self.audio_bytes))
-        st.audio(self.audio_bytes, format='audio/ogg')
         self.new_audio_file.close() 
+        st.audio(self.audio_bytes, format='audio/ogg')
+        
         
     async def recv_queued(self, frames: List[av.AudioFrame]) -> List[av.AudioFrame]:
         get_audio() #tts happens
@@ -58,8 +59,8 @@ class AudioProcessor(AudioProcessorBase):
 if __name__ == "__main__":
     # webrtc_streamer(key="example", video_processor_factory=VideoTransformer)
     webrtc_streamer(    key="WYH",
-    mode=WebRtcMode.SENDRECV,
-    rtc_configuration=RTC_CONFIGURATION,
+    #mode=WebRtcMode.SENDRECV,
+    #rtc_configuration=RTC_CONFIGURATION,
     media_stream_constraints={"video": True, "audio": True},
     video_processor_factory=VideoTransformer,
     audio_processor_factory=AudioProcessor,
