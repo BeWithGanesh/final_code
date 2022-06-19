@@ -8,8 +8,6 @@ apikey = 'GNkUABgdG-kIzSRzlPME93LRjADRJT1DHiApRv0BfSXb'
 url = 'https://api.eu-gb.text-to-speech.watson.cloud.ibm.com/instances/3f3a255f-be1d-4b4a-b0a9-ef8ab322259a'
 
 
-
-
 # Setup Service
 authenticator = IAMAuthenticator(apikey)
 tts = TextToSpeechV1(authenticator=authenticator)
