@@ -59,8 +59,8 @@ class AudioProcessor(AudioProcessorBase):
 if __name__ == "__main__":
     # webrtc_streamer(key="example", video_processor_factory=VideoTransformer)
     webrtc_streamer(    key="WYH",
-    #mode=WebRtcMode.SENDRECV,
-    #rtc_configuration=RTC_CONFIGURATION,
+    mode=WebRtcMode.SENDRECV,
+    rtc_configuration=RTC_CONFIGURATION,
     media_stream_constraints={"video": True, "audio": True},
     video_processor_factory=VideoTransformer,
     audio_processor_factory=AudioProcessor,
